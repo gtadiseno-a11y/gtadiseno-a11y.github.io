@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIJE DISEÑOS | Diseño Gráfico</title>
+<meta name="description" content="VIJE DISEÑOS - Estudio creativo de diseño gráfico, identidad visual, redes sociales y publicidad.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --bg:#070808;--panel:#0d0f10;--panel2:#121516;--line:#292d2e;
+ --text:#f5f5f3;--muted:#9da09d;--gold:#d6a73e;--gold2:#f1c35a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Montserrat,Arial,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 75% 12%,rgba(214,167,62,.09),transparent 22%),radial-gradient(circle at 20% 60%,rgba(255,255,255,.025),transparent 20%);z-index:-1}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,90%);margin:auto}
+header{height:82px;position:fixed;top:0;left:0;width:100%;z-index:100;background:rgba(7,8,8,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav{height:100%;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px}
+.mark{font-weight:800;font-size:34px;letter-spacing:-5px;line-height:1}
+.mark .d{color:var(--gold)}
+.brand-text{font-size:11px;letter-spacing:3px;line-height:1.45}
+.brand-text small{color:var(--gold);font-size:8px;letter-spacing:3px}
+.menu{display:flex;gap:30px;align-items:center;font-size:11px;font-weight:600;letter-spacing:.8px;color:#d2d3d0}
+.menu a{transition:.25s}.menu a:hover{color:var(--gold)}
+.contact-nav{border:1px solid rgba(214,167,62,.55);padding:13px 20px;border-radius:4px;font-size:10px;letter-spacing:.8px}
+.hero{min-height:100vh;padding-top:82px;display:grid;align-items:center}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;padding:80px 0}
+.eyebrow{color:var(--gold2);font-size:11px;letter-spacing:6px;margin-bottom:20px}
+h1{font-size:clamp(58px,8vw,110px);line-height:.92;letter-spacing:-3px;font-weight:800}
+h1 span{color:var(--gold)}
+.hero-copy{color:#afb2af;max-width:560px;line-height:1.9;margin:28px 0 35px;font-size:15px}
+.actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:16px 25px;border-radius:4px;font-size:11px;font-weight:700;letter-spacing:.8px;transition:.25s}
+.btn.gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#111}
+.btn.dark{border:1px solid #3b3e3d;background:#0c0e0f}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(0,0,0,.3)}
+.hero-art{position:relative;height:540px;display:flex;align-items:center;justify-content:center}
+.glow{position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(214,167,62,.25),transparent 65%);filter:blur(8px)}
+.device{position:relative;width:min(440px,90%);height:390px;background:linear-gradient(145deg,#1a1d1e,#090a0b 60%);border:1px solid #383c3b;border-radius:18px;box-shadow:30px 30px 70px rgba(0,0,0,.55);transform:perspective(900px) rotateY(-10deg) rotateX(4deg)}
+.device:after{content:"";position:absolute;left:6%;right:6%;bottom:-28px;height:45px;border-radius:50%;background:#101213;border:1px solid #343736;box-shadow:0 20px 30px #000}
+.device-inner{position:absolute;inset:18px;border:1px solid #292c2d;border-radius:10px;padding:32px;background:radial-gradient(circle at 70% 20%,rgba(214,167,62,.15),transparent 25%),#0a0c0d}
+.vd-big{font-size:110px;font-weight:800;letter-spacing:-14px;text-align:center;margin-top:40px}
+.vd-big span{color:var(--gold)}
+.device-name{text-align:center;letter-spacing:5px;font-size:15px;margin-top:10px}.device-name small{display:block;font-size:8px;color:var(--gold);letter-spacing:4px;margin-top:8px}
+.pen{position:absolute;width:17px;height:330px;background:linear-gradient(90deg,#090a0b,#777,#0b0c0d);border-radius:10px;right:12%;top:25px;transform:rotate(26deg);box-shadow:8px 8px 20px #000}
+.scroll{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-size:9px;letter-spacing:2px;color:#777}
+section{padding:105px 0;border-top:1px solid rgba(255,255,255,.055)}
+.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:45px}
+.kicker{color:var(--gold);font-size:10px;letter-spacing:3px;margin-bottom:10px}
+h2{font-size:38px;letter-spacing:-1px}.section-sub{max-width:430px;color:var(--muted);font-size:13px;line-height:1.7}
+.services{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.card{min-height:245px;padding:27px 22px;background:linear-gradient(145deg,#111415,#0a0c0d);border:1px solid var(--line);border-radius:9px;transition:.3s}
+.card:hover{border-color:rgba(214,167,62,.7);transform:translateY(-8px)}
+.icon{font-size:31px;color:var(--gold);margin-bottom:42px}
+.card h3{font-size:13px;margin-bottom:14px}.card p{color:#949793;font-size:11px;line-height:1.8}
+.filters{display:flex;gap:23px;font-size:10px;letter-spacing:.6px;color:#888;flex-wrap:wrap}
+.filters button{background:none;border:0;color:inherit;font:inherit;cursor:pointer;padding:8px 0}.filters .active{color:var(--gold);border-bottom:1px solid var(--gold)}
+.portfolio{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.work{height:235px;border:1px solid #2a2d2d;border-radius:5px;overflow:hidden;position:relative;padding:22px;display:flex;flex-direction:column;justify-content:flex-end;transition:.35s;background:#111}
+.work:hover{transform:translateY(-5px);border-color:var(--gold)}
+.work:before{content:"";position:absolute;inset:0;opacity:.75;background:linear-gradient(150deg,transparent 30%,rgba(0,0,0,.8))}
+.work>*{position:relative;z-index:2}.work h3{font-family:'Playfair Display',serif;font-size:27px;line-height:1}.work p{font-size:8px;letter-spacing:2px;margin-top:8px;color:#ddd}
+.coffee{background:radial-gradient(circle at 70% 60%,#9c6b2c,transparent 17%),linear-gradient(135deg,#090909,#22201c)}
+.natura{background:radial-gradient(circle at 65% 45%,#a2bc58,transparent 20%),linear-gradient(135deg,#13200e,#455d20)}
+.fit{background:radial-gradient(circle at 70% 35%,#b3e03c,transparent 25%),linear-gradient(135deg,#090b0b,#303632)}
+.beauty{background:radial-gradient(circle at 75% 45%,#f5c8bc,transparent 22%),linear-gradient(135deg,#3c2328,#e5c8bf)}
+.burger{background:radial-gradient(circle at 50% 65%,#d28a2d,transparent 24%),linear-gradient(135deg,#3e1b08,#111)}
+.azaro{background:radial-gradient(circle at 55% 50%,#bba779,transparent 18%),linear-gradient(135deg,#171513,#050505)}
+.finance{background:radial-gradient(circle at 70% 40%,#356db6,transparent 25%),linear-gradient(135deg,#11233c,#07101b)}
+.sport{background:radial-gradient(circle at 60% 60%,#c52218,transparent 18%),linear-gradient(135deg,#111,#281313)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about-text p{color:#a5a8a5;line-height:2;font-size:14px;margin:20px 0}
+.signature{font-family:'Playfair Display',serif;color:var(--gold);font-style:italic;font-size:24px}
+.stats{display:grid;gap:12px}.stat{display:flex;align-items:center;gap:25px;padding:22px;background:#0c0e0f;border:1px solid #292c2c;border-radius:6px}.stat b{font-size:34px;color:#eee}.stat span{font-size:10px;color:#989b98;letter-spacing:1px}
+.testimonial{background:linear-gradient(145deg,#111313,#090b0b);border:1px solid #292c2c;border-radius:10px;padding:42px}.quote{font-size:50px;color:var(--gold);line-height:.7}.testimonial p{color:#c4c6c3;line-height:1.9;margin:20px 0}.person{font-size:11px;color:var(--gold)}
+.cta{padding:80px 0;background:radial-gradient(circle at 50% 50%,rgba(214,167,62,.1),transparent 45%)}
+.cta-grid{display:grid;grid-template-columns:1.2fr repeat(3,1fr);gap:12px;align-items:stretch}.cta h2{font-size:45px}.contact-box{border:1px solid rgba(214,167,62,.45);background:#0c0e0f;padding:25px;border-radius:6px;display:flex;align-items:center;gap:14px;font-size:11px}.contact-box strong{display:block;font-size:12px;margin-top:4px}
+footer{padding:40px 0;border-top:1px solid #202322;color:#777;font-size:10px}.footer{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.float{position:fixed;right:20px;bottom:22px;display:grid;gap:10px;z-index:99}.float a{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;border:1px solid #303332;background:#121516;font-size:18px;box-shadow:0 8px 20px rgba(0,0,0,.35)}.float a:first-child{color:#6ee786;border-color:#276b3a}.float a:last-child{color:#65bdf2}
+@media(max-width:950px){.menu{display:none}.hero-grid,.about-grid{grid-template-columns:1fr}.hero-art{height:420px}.services{grid-template-columns:repeat(2,1fr)}.portfolio{grid-template-columns:repeat(2,1fr)}.cta-grid{grid-template-columns:1fr 1fr}.cta-grid>div:first-child{grid-column:1/-1}}
+@media(max-width:600px){.hero-grid{padding:55px 0}.hero-art{height:340px}.device{height:290px}.vd-big{font-size:75px}.pen{height:230px}.section-head{display:block}.section-sub{margin-top:15px}.services,.portfolio{grid-template-columns:1fr}.cta-grid{grid-template-columns:1fr}.cta-grid>div:first-child{grid-column:auto}.footer{flex-direction:column;text-align:center}.work{height:250px}.contact-nav{padding:10px 13px}}
+</style>
+</head>
+<body>
+<header><div class="container nav">
+  <a href="#inicio" class="brand"><div class="mark">V<span class="d">D</span></div><div class="brand-text">VIJE DISEÑOS<br><small>DISEÑO GRÁFICO</small></div></a>
+  <nav class="menu"><a href="#inicio">INICIO</a><a href="#servicios">SERVICIOS</a><a href="#portafolio">PORTAFOLIO</a><a href="#nosotros">SOBRE NOSOTROS</a><a href="#contacto">CONTACTO</a></nav>
+  <a class="contact-nav" href="#contacto">HABLEMOS ↗</a>
+</div></header>
+
+<main>
+<section class="hero" id="inicio"><div class="container hero-grid">
+ <div><div class="eyebrow">DISEÑAMOS IDEAS</div><h1>QUE DEJAN<br><span>HUELLA.</span></h1><p class="hero-copy">Transformamos ideas en experiencias visuales que conectan, comunican y cautivan. Diseño gráfico con una visión moderna, elegante y profesional.</p>
+ <div class="actions"><a class="btn gold" href="#portafolio">VER PORTAFOLIO →</a><a class="btn dark" href="https://wa.me/584120840412" target="_blank">HABLEMOS ◌</a></div></div>
+ <div class="hero-art"><div class="glow"></div><div class="device"><div class="device-inner"><div class="vd-big">V<span>D</span></div><div class="device-name">VIJE DISEÑOS<small>DISEÑO GRÁFICO</small></div></div></div><div class="pen"></div></div>
+</div><div class="scroll">DESLIZA PARA DESCUBRIR ↓</div></section>
+
+<section id="servicios"><div class="container">
+ <div class="section-head"><div><div class="kicker">LO QUE HACEMOS</div><h2>SERVICIOS</h2></div><p class="section-sub">Soluciones creativas diseñadas para ayudar a marcas, empresas y emprendedores a destacar.</p></div>
+ <div class="services">
+  <article class="card"><div class="icon">✦</div><h3>DISEÑO GRÁFICO</h3><p>Piezas visuales profesionales para comunicar y potenciar tu marca.</p></article>
+  <article class="card"><div class="icon">◇</div><h3>IDENTIDAD DE MARCA</h3><p>Marcas sólidas con personalidad, coherencia y una imagen memorable.</p></article>
+  <article class="card"><div class="icon">▯</div><h3>REDES SOCIALES</h3><p>Contenido atractivo para destacar en cualquier plataforma digital.</p></article>
+  <article class="card"><div class="icon">⌁</div><h3>PUBLICIDAD</h3><p>Campañas visuales que capturan la atención y generan resultados.</p></article>
+  <article class="card"><div class="icon">⬡</div><h3>PACKAGING</h3><p>Diseños de empaque que hacen que tu producto destaque.</p></article>
+ </div>
+</div></section>
+
+<section id="portafolio"><div class="container">
+ <div class="section-head"><div><div class="kicker">NUESTROS TRABAJOS</div><h2>PORTAFOLIO</h2></div>
+ <div class="filters"><button class="active" data-filter="all">TODOS</button><button data-filter="branding">IDENTIDAD</button><button data-filter="social">REDES</button><button data-filter="ads">PUBLICIDAD</button></div></div>
+ <div class="portfolio">
+  <article class="work coffee" data-cat="branding"><h3>BLACK<br>COFFEE</h3><p>IDENTIDAD VISUAL</p></article>
+  <article class="work natura" data-cat="branding"><h3>NATURA</h3><p>PRODUCTO & BRANDING</p></article>
+  <article class="work fit" data-cat="ads"><h3>FITZONE</h3><p>CAMPAÑA VISUAL</p></article>
+  <article class="work beauty" data-cat="social"><h3>Belleza</h3><p>REDES SOCIALES</p></article>
+  <article class="work burger" data-cat="ads"><h3>BURGER<br>HOUSE</h3><p>PUBLICIDAD</p></article>
+  <article class="work azaro" data-cat="branding"><h3>AZARO</h3><p>IDENTIDAD PREMIUM</p></article>
+  <article class="work finance" data-cat="social"><h3>Finan<br>App</h3><p>DISEÑO DIGITAL</p></article>
+  <article class="work sport" data-cat="ads"><h3>IMPULSA<br>TUS LÍMITES</h3><p>CAMPAÑA DEPORTIVA</p></article>
+ </div>
+</div></section>
+
+<section id="nosotros"><div class="container about-grid">
+ <div class="about-text"><div class="kicker">SOBRE NOSOTROS</div><h2>VIJE DISEÑOS</h2><p>Somos un estudio creativo apasionado por el diseño. Ayudamos a marcas, empresas y emprendedores a destacar a través de soluciones visuales modernas, estratégicas y efectivas.</p><div class="signature">Vije Diseños</div></div>
+ <div><div class="stats"><div class="stat"><b>120+</b><span>PROYECTOS<br>REALIZADOS</span></div><div class="stat"><b>80+</b><span>CLIENTES<br>SATISFECHOS</span></div><div class="stat"><b>5+</b><span>AÑOS DE<br>EXPERIENCIA</span></div></div></div>
+</div></section>
+
+<section><div class="container"><div class="section-head"><div><div class="kicker">TESTIMONIOS</div><h2>LO QUE DICEN</h2></div></div>
+<div class="testimonial"><div class="quote">“</div><p>Excelente trabajo, superaron mis expectativas. Muy profesionales, creativos y atentos a cada detalle. Recomiendo completamente a VIJE DISEÑOS.</p><div class="person">— CLIENTE SATISFECHO</div></div></div></section>
+
+<section class="cta" id="contacto"><div class="container cta-grid">
+ <div><div class="kicker">¿TIENES UN PROYECTO?</div><h2>HABLEMOS<br>Y HAGÁMOSLO REALIDAD.</h2></div>
+ <a class="contact-box" href="https://wa.me/584120840412" target="_blank"><span style="font-size:25px;color:#66dd83">◉</span><div>WHATSAPP<strong>0412 084 0412</strong></div></a>
+ <a class="contact-box" href="#" onclick="alert('Agrega aquí tu enlace o usuario de Telegram.');return false;"><span style="font-size:25px;color:#65bdf2">➤</span><div>ESCRÍBENOS POR<strong>TELEGRAM</strong></div></a>
+ <a class="contact-box" href="mailto:info@vijedisenos.com"><span style="font-size:25px">✉</span><div>ENVÍANOS UN CORREO<strong>INFO@VIJEDISENOS.COM</strong></div></a>
+</div></section>
+</main>
+
+<div class="float"><a href="https://wa.me/584120840412" target="_blank" title="WhatsApp">◉</a><a href="#" onclick="alert('Agrega tu enlace de Telegram.');return false;" title="Telegram">➤</a></div>
+<footer><div class="container footer"><div class="brand"><div class="mark">V<span class="d">D</span></div><div class="brand-text">VIJE DISEÑOS<br><small>DISEÑO GRÁFICO</small></div></div><div>© 2026 VIJE DISEÑOS. Todos los derechos reservados.</div></div></footer>
+
+<script>
+const buttons=document.querySelectorAll('[data-filter]'), works=document.querySelectorAll('.work');
+buttons.forEach(b=>b.addEventListener('click',()=>{buttons.forEach(x=>x.classList.remove('active'));b.classList.add('active');const f=b.dataset.filter;works.forEach(w=>{w.style.display=(f==='all'||w.dataset.cat===f)?'flex':'none'});}));
+</script>
+</body></html>
